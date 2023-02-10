@@ -1,59 +1,56 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
-  <div class="container-fluid">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top my-3 d-flex justify-content-center">
 
-    <div class="row">
-      <div class="col-12 d-flex justify-content-center p-0">
-        <%= link_to root_path, class: "navbar-logo d-flex justify-content-center" do %>
-          <%= image_tag "eua-logo.png" %>
-        <% end %>
-      </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <%= link_to root_path, class: "navbar-logo" do %>
+        <%= image_tag "eua-logo.png" %>
+      <% end %>
     </div>
 
-
-<%# PAREI AQUI, ESTOU TENTANDO FAZER OS BOTÕES FICAREM ALINHADOS NA LINHA ABAIXO DA LOGO %>
-
-    <div class="row">
-      <div class="col-3 d-flex justify-content-start">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-
-      <div class="d-flex mb-3">
-        <div class="me-auto p-2">Flex item
-        </div>
-
-        <div class="p-2"><i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-
-        <div class="p-2"><i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-      </div>
-
-      <%# <div class="col-9 d-flex justify-content-end">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div> %>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+    <div class="col-8 flex-grow-1">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Messages</a>
+            <%= link_to "Coleções", root_path, class: "nav-link" %>
           </li>
-          <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
-            </div>
+          <li class="nav-item">
+            <%= link_to "Novidades", root_path, class: "nav-link" %>
           </li>
-          <!--li class="nav-item"-->
-          <!--/li-->
-      </ul>
+          <li class="nav-item">
+            <%= link_to "Sale", root_path, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-4 align-self-center">
+      <div class="row justify-content-center">
+        <ul class="navbar-nav me-auto list-group list-group-horizontal">
+          <li class="col-2 mx-1 nav-link">
+            <%= link_to "", root_path, class: "fa-solid fa-magnifying-glass nav-link" %>
+          </li>
+          <li class="col-2 mx-1 nav-link">
+            <%= link_to "", root_path, class: "fa-solid fa-cart-shopping nav-link" %>
+          </li>
+          <li class="col-2 mx-1 nav-link">
+            <%= link_to "", root_path, class: "fa-regular fa-user nav-link" %>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+
 </div>
+
+
+<%#
+CONFERÊNCIAS
+1- SE O MENU FICOU RESPONSIVO
+2- LINKS DOS BOTÕES (ENCAMINHA PARA PÁGINA ESPECÍFICA)
+%>
